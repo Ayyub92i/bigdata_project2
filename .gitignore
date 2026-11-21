@@ -24,4 +24,3 @@ dbt_packages/
 # Jupyter and system files
 .ipynb_checkpoints/
 .DS_Store
-EOF
