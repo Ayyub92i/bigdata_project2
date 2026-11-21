@@ -44,10 +44,8 @@ Quels genres de jeux vidéo réalisent les meilleures ventes selon les régions,
 
 ## Chemins S3
 
-- **Données brutes :** `s3://NOM_DU_BUCKET/bigdata_project2/raw/vgsales.csv`
-- **Données traitées :** `s3://NOM_DU_BUCKET/bigdata_project2/processed/`
-
-Le nom exact du bucket sera ajouté après le dépôt des données sur S3.
+- **Données brutes :** `s3://user-a-belchguer-ece/bigdata_project2/raw/vgsales.csv`
+- **Données traitées :** `s3://user-a-belchguer-ece/bigdata_project2/processed/`
 
 ## Procédure de reproduction
 
