@@ -1,0 +1,27 @@
+# Data files
+data/
+*.csv
+*.parquet
+*.duckdb
+*.db
+
+# Secrets and credentials
+.env
+.env.*
+profiles.yml
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# dbt
+target/
+logs/
+dbt_packages/
+
+# Jupyter and system files
+.ipynb_checkpoints/
+.DS_Store
+EOF
