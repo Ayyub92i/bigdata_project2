@@ -1,0 +1,68 @@
+Sat Nov 21 02:56:07 PM UTC 2026
+Service Onyxia : vscode-pyspark-862532-0
+
+=== Schéma détecté par DuckDB ===
+ column_name column_type null  key default extra
+        Rank      BIGINT  YES None    None  None
+        Name     VARCHAR  YES None    None  None
+    Platform     VARCHAR  YES None    None  None
+        Year      BIGINT  YES None    None  None
+       Genre     VARCHAR  YES None    None  None
+   Publisher     VARCHAR  YES None    None  None
+    NA_Sales      DOUBLE  YES None    None  None
+    EU_Sales      DOUBLE  YES None    None  None
+    JP_Sales      DOUBLE  YES None    None  None
+ Other_Sales      DOUBLE  YES None    None  None
+Global_Sales      DOUBLE  YES None    None  None
+
+=== Résumé de la qualité des données ===
+ total_rows  missing_year  missing_genre  missing_publisher  distinct_games  distinct_platforms  distinct_genres  distinct_publishers  rows_with_negative_sales  inconsistent_global_sales
+      16598           271              0                 58           11493                  31               12                  578                       0.0                        7.0
+
+=== Vérification des années ===
+ minimum_year  maximum_year  implausible_years
+         1980          2020                0.0
+
+=== Vérification des doublons exacts ===
+ duplicate_groups  duplicate_rows
+                1             1.0
+
+=== Exemples de valeurs manquantes ===
+ Rank                                        Name Platform  Year     Genre                              Publisher
+  180                             Madden NFL 2004      PS2  <NA>    Sports                        Electronic Arts
+  378                            FIFA Soccer 2004      PS2  <NA>    Sports                        Electronic Arts
+  432                  LEGO Batman: The Videogame      Wii  <NA>    Action Warner Bros. Interactive Entertainment
+  471                  wwe Smackdown vs. Raw 2006      PS2  <NA>  Fighting                                    NaN
+  608                              Space Invaders     2600  <NA>   Shooter                                  Atari
+  625                                   Rock Band     X360  <NA>      Misc                        Electronic Arts
+  650    Frogger's Adventures: Temple of the Frog      GBA  <NA> Adventure           Konami Digital Entertainment
+  653 LEGO Indiana Jones: The Original Adventures      Wii  <NA>    Action                              LucasArts
+  713                              Call of Duty 3      Wii  <NA>   Shooter                             Activision
+  784                                   Rock Band      Wii  <NA>      Misc                              MTV Games
+
+=== Exemples d'incohérences des ventes mondiales ===
+ Rank                           Name Platform  NA_Sales  EU_Sales  JP_Sales  Other_Sales  Global_Sales  calculated_global_sales  difference
+  106                       Tekken 3       PS      3.27      2.22      1.40         0.29          7.16                     7.18       -0.02
+ 1383     Need For Speed: Undercover      PS2      0.38      0.08      0.03         0.93          1.40                     1.42       -0.02
+ 1413        Need for Speed: The Run     X360      0.63      0.58      0.00         0.15          1.38                     1.36        0.02
+ 1550           Kid Icarus: Uprising      3DS      0.48      0.35      0.36         0.07          1.28                     1.26        0.02
+ 3234                            Wet      PS3      0.22      0.27      0.01         0.11          0.63                     0.61        0.02
+ 4593      Yu-Gi-Oh! GX: Tag Force 2      PSP      0.03      0.20      0.10         0.11          0.42                     0.44       -0.02
+ 5828 One Piece: Unlimited World Red      PS3      0.09      0.12      0.06         0.05          0.30                     0.32       -0.02
+
+=== Répartition et ventes par genre ===
+       Genre  number_of_games  total_global_sales
+      Action             3316             1751.18
+      Sports             2346             1330.93
+     Shooter             1310             1037.37
+Role-Playing             1488              927.37
+    Platform              886              831.37
+        Misc             1739              809.96
+      Racing             1249              732.04
+    Fighting              848              448.91
+  Simulation              867              392.20
+      Puzzle              582              244.95
+   Adventure             1286              239.04
+    Strategy              681              175.12
+
+Contrôle qualité terminé avec succès.
