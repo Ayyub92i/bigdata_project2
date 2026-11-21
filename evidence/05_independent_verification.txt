@@ -1,0 +1,55 @@
+Sat Nov 21 03:15:58 PM UTC 2026
+Namespace Onyxia : onyxia-a-belchguer-ece
+=== Vérification indépendante avec pandas ===
+
+Résultat pandas par genre :
+       Genre  number_of_games  global_sales
+      Action             1925       1750.16
+      Sports             1379       1330.54
+     Shooter              817       1036.82
+Role-Playing             1219        927.26
+    Platform              589        831.04
+        Misc             1327        809.30
+      Racing              772        731.77
+    Fighting              612        448.94
+  Simulation              726        391.91
+      Puzzle              499        244.42
+   Adventure             1048        238.81
+    Strategy              584        174.86
+
+=== Résultat Gold produit avec DuckDB ===
+       genre  number_of_games  global_sales
+      Action             1925       1750.16
+      Sports             1379       1330.54
+     Shooter              817       1036.82
+Role-Playing             1219        927.26
+    Platform              589        831.04
+        Misc             1327        809.30
+      Racing              772        731.77
+    Fighting              612        448.94
+  Simulation              726        391.91
+      Puzzle              499        244.42
+   Adventure             1048        238.81
+    Strategy              584        174.86
+
+=== Comparaison pandas / Gold ===
+       Genre  global_sales_pandas  global_sales_gold  sales_difference  number_of_games_pandas  number_of_games_gold  games_difference
+      Action              1750.16            1750.16               0.0                    1925                  1925                 0
+      Sports              1330.54            1330.54               0.0                    1379                  1379                 0
+     Shooter              1036.82            1036.82               0.0                     817                   817                 0
+Role-Playing               927.26             927.26               0.0                    1219                  1219                 0
+    Platform               831.04             831.04               0.0                     589                   589                 0
+        Misc               809.30             809.30               0.0                    1327                  1327                 0
+      Racing               731.77             731.77               0.0                     772                   772                 0
+    Fighting               448.94             448.94               0.0                     612                   612                 0
+  Simulation               391.91             391.91               0.0                     726                   726                 0
+      Puzzle               244.42             244.42               0.0                     499                   499                 0
+   Adventure               238.81             238.81               0.0                    1048                  1048                 0
+    Strategy               174.86             174.86               0.0                     584                   584                 0
+
+=== Résultat de la vérification ===
+Genre dominant avec pandas : Action
+Genre dominant dans Gold   : Action
+Écart maximal des ventes   : 0.00
+Écart maximal du nombre de jeux : 0
+Vérification indépendante réussie.
